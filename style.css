@@ -1,0 +1,80 @@
+/* Global CSS Starts Here*/
+
+* {
+    gap: 10px;
+}
+
+:root {
+    --primary-color: #537073;
+    --secondry-color: #97978D;
+    --third-color: #D9896C;
+    --fourth-color: #ffffff;
+    --fifth-color: #141414;
+    /*fonts*/
+    --primary-font: Staatliches;
+    --secondry-font: Exo;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.row {
+    width: 1280px;
+    margin: auto;
+    padding: 6% 0;
+}
+
+.column {
+    flex: 1;
+}
+
+.d-flex {
+    display: flex;
+}
+
+p {
+    font-family: var(--secondry-font);
+    line-height: 2;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: var(--primary-font);
+    line-height: 1.5;
+    font-size: 50px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    color: var(--fifth-color);
+}
+
+h2 {
+    font-family: var(--primary-font);
+    line-height: 1.5;
+    font-size: 35px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    color: var(--fifth-color);
+}
+
+h3 {
+    font-family: var(--primary-font);
+    line-height: 1.5;
+    font-size: 27px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    color: var(--fifth-color);
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* Global CSS Ends Here*/
