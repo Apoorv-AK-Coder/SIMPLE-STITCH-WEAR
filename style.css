@@ -181,12 +181,12 @@ button {
     background-attachment: scroll;
     background-size: cover;
     padding: 15% 5%;
-    border-radius: 10px 500px 500px 10px;
     width: 100%;
     /* clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%); */
 }
 
 .p1 {
+    border-radius: 10px 500px 500px 10px;
     background-image: url(./images/Img-04.jpg);
 }
 
