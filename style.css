@@ -209,3 +209,78 @@ button {
 }
 
 /*Footer Ends Here*/
+
+
+/*Signup form starts here*/
+.form {
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./images/Img-03.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+form {
+    background-color: ;
+    border: 2px dotted var(--third-color);
+    border-radius: 11px;
+    padding: 20px;
+}
+
+form input {
+    background-color: rgba(0, 0, 0, 0.3);
+    border: none;
+    border-bottom: 2px solid var(--fourth-color);
+    border-radius: 5px;
+    color:white;
+    padding: 15px;
+    width: 100%;
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-family: var(--secondry-font);
+    box-shadow: 0 0 2px 0 white;
+}
+
+::placeholder {color:white;font-family: var(--secondry-font);}
+
+form p {
+    font-family: var(--secondry-font);
+    line-height: 2;
+    font-size: 18px;
+    color:white;
+    margin: 0;
+    padding: 0;
+    text-shadow: 2px 2px 2px var(--fifth-color);
+}
+
+form .column {
+    padding-right: 10px;
+}
+
+.tongle {
+    background: linear-gradient(to top, var(--primary-color), var(--secondry-color));
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.tongle p {
+    font-family: var(--secondry-font);
+    line-height: 2;
+    font-size: 30px;
+    text-align: center;
+    color:white;
+    margin: 0;
+    padding: 0;
+}
+
+.up, .in:hover {
+    background-color: var(--secondry-color);
+    cursor: pointer;
+}
+
+.in, .up:hover {
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+
+/*Signup form ends here*/
