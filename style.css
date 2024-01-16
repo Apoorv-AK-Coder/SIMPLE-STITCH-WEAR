@@ -288,4 +288,6 @@ form .column {
     margin-top: 3%;
 }
 
+
 /*Signup form ends here*/
+.sign-in {display: none;}
