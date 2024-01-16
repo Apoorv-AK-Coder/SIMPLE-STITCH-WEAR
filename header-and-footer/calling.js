@@ -35,7 +35,7 @@ function form1(){
 }
 
 
-btn1.addEventListener("onclick", form2())
+btn1.addEventListener("click", form2)
 function form2(){
     console.log("hi");
     if((x.style.display = "block")) {

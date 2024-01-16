@@ -10,7 +10,7 @@
     }
 
     .row {
-        padding: 4% !important;
+        padding: 20px !important;
         width: 100% !important;
     }
 
@@ -19,9 +19,11 @@
     }
 
     .bottom {
-        padding: 20px !important;
+        padding: 10px !important;
         width: 100% !important;
     }
+
+    .bottom p {font-size: 14px;}
 
     h1 {
         font-size: 45px;
@@ -68,6 +70,14 @@
 
     .sign-up {
         padding-bottom: 20px;
+    }
+
+    .form {
+        height: 925px;
+    }
+
+    .flex {
+        margin-top: 0px !important;
     }
 
 }
