@@ -11,14 +11,11 @@ fetch('./header-and-footer/footer.html')
     document.querySelector("footer").innerHTML = data;
 });
 
-document.getElementById("up").addEventListener("click", up)
+// document.getElementById("up").addEventListener("click", up)
 
-function up() {
-    fetch('./header-and-footer/up.html')
-.then((response) => response.text())
-.then((data) => {
-    document.querySelector("form1").innerHTML = data;
-})}
+// function up() {
+    
+// })}
 
 // document.getElementById("in").addEventListener("click", in)
 

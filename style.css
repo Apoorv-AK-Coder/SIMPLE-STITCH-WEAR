@@ -261,6 +261,7 @@ form .column {
     background: linear-gradient(to top, var(--primary-color), var(--secondry-color));
     border-radius: 50px;
     overflow: hidden;
+    display: flex;
 }
 
 .tongle p {
@@ -281,6 +282,11 @@ form .column {
 .in, .up:hover {
     background-color: var(--primary-color);
     cursor: pointer;
+}
+
+.form .flex {
+    gap: 10px;
+    margin-top: 3%;
 }
 
 /*Signup form ends here*/
