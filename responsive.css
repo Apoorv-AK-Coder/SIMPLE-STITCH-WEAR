@@ -1,7 +1,7 @@
 @media only screen and (max-width: 1024px) {
 
     .row {
-        padding: 20px !important;
+        margin: 0 15px;
         width: 100% !important;
     }
 
@@ -17,4 +17,18 @@
 
     h1 { font-size: 45px; }
     h2 { font-size: 35px; }
+    h3 { font-size: 30px; }
+    p2 { font-size: 17px; }
+    intro { font-size:25px; }
+    button { font-size: 15px; }
+
+    .head {
+        padding: 10px !important;
+        width: 100%;
+    }
+
+    .head img {height:50px;}
+
+    /* .herobg {width:100%; background-size: cover;} */
+
 }
