@@ -1,5 +1,9 @@
 @media only screen and (max-width: 1024px) {
 
+    * {
+        gap: 0px !important;
+    }
+
     body {
         margin: 0 !important;
         padding: 0 !important;
@@ -12,7 +16,6 @@
 
     .d-flex {
         flex-direction: column !important;
-        flex-wrap: nowrap;
     }
 
     .bottom {
@@ -60,5 +63,7 @@
         background-attachment: fixed;
         background-size: cover;
     }
+
+    .product { width:100% !important; }
 
 }

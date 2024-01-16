@@ -1,7 +1,9 @@
 /* Global CSS Starts Here*/
 
 * {
-    gap: 10px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 :root {
@@ -14,11 +16,6 @@
     --primary-font: Staatliches;
     --secondry-font: Exo;
     --third-font: Sacramento;
-}
-
-body {
-    margin: 0;
-    padding: 0;
 }
 
 .row {
