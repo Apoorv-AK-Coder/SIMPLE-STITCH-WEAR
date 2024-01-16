@@ -1,0 +1,20 @@
+@media only screen and (max-width: 1024px) {
+
+    .row {
+        padding: 20px !important;
+        width: 100% !important;
+    }
+
+    .d-flex {
+        flex-direction: column !important;
+        
+    }
+
+    .bottom {
+        padding: 20px !important;
+        width: 100% !important;
+    }
+
+    h1 { font-size: 45px; }
+    h2 { font-size: 35px; }
+}
