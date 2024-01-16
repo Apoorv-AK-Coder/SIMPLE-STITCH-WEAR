@@ -66,4 +66,8 @@
 
     .product { width:100% !important; }
 
+    .sign-up {
+        padding-bottom: 20px;
+    }
+
 }
