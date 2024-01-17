@@ -1,15 +1,15 @@
-const { MongoClient } = require("mongodb");
+const { MongoClient, v1 } = require('mongodb');
 
 const username = encodeURIComponent("User1");
 const password = encodeURIComponent("User@#123");
-const cluster = "<clusterName>";
-const authSource = "<authSource>";
-const authMechanism = "<authMechanism>";
+const cluster = "Products";
+const authSource = "localhost:27017";
+const authMechanism = "AP_SOUTH_1";
 
 let uri =
   `mongodb+srv://${username}:${password}@${cluster}/?authSource=${authSource}&authMechanism=${authMechanism}`;
 
-const client = new MongoClient(uri);
+const client = new MongoClient(uri, v1);
 
 async function run() {
   try {
@@ -26,6 +26,8 @@ async function run() {
   }
 }
 run().catch(console.dir);
+
+console.log("hi");
 
 
 // const { MongoClient } = require("mongodb");
