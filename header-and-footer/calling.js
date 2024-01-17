@@ -1,3 +1,4 @@
+// for the header
 fetch('./header-and-footer/header.html')
 .then((response) => response.text())
 .then((data) => {
@@ -5,24 +6,24 @@ fetch('./header-and-footer/header.html')
 });
 
 
+
+// for the footer
+
 fetch('./header-and-footer/footer.html')
 .then((response) => response.text())
 .then((data) => {
     document.querySelector("footer").innerHTML = data;
 });
 
-// document.getElementById("up").addEventListener("click", up)
 
-// function up() {}
+
+// for the form in a single position
 
 let btn1 = document.getElementById("myFunction");
 let btn2 = document.getElementById("myFunction1");
 
 let x = document.getElementById("sign-up");
 let y = document.getElementById("sign-in");
-
-
-
 
 btn2.addEventListener("click", form1)
 function form1(){
@@ -33,7 +34,6 @@ function form1(){
         y.style.display = 'block';
     }
 }
-
 
 btn1.addEventListener("click", form2)
 function form2(){
@@ -47,3 +47,20 @@ function form2(){
 }
 
 
+// for the form validation
+
+function validate() {
+    const uname = document.getElementById("uname");
+    const uid = document.getElementById("uid");
+    const mail = document.getElementById("mail");
+    const number = document.getElementById("number");
+    const password = document.getElementById("password");
+    const cpassword = document.getElementById("confirm-password");
+
+    if(uname.value.trim() == "" || uid.value.trim() == "" || mail.value.trim() == "" || number.value.trim() == "" || password.value.trim() == "" || cpassword.value.trim() == ""){
+        alert("Please ebter the values");
+        return false;
+    } else {
+        return true;
+    }
+}
