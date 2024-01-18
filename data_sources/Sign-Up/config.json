@@ -1,0 +1,10 @@
+{
+    "name": "Sign-Up",
+    "type": "mongodb-atlas",
+    "config": {
+        "clusterName": "Sign-Up",
+        "readPreference": "primary",
+        "wireProtocolEnabled": true
+    },
+    "version": 1
+}
