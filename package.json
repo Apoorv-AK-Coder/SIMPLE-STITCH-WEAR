@@ -1,0 +1,16 @@
+{
+  "name": "simple-stitch-wear",
+  "version": "1.0.0",
+  "description": "",
+  "main": "playground-1.mongodb.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "^6.3.0-dev.20240113.sha.86e2659",
+    "mongosh": "^2.1.1",
+    "node": "^21.2.0"
+  }
+}
