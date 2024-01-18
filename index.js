@@ -1,8 +1,7 @@
-let mongodb;
-const { RemoteMongoClient } = mongodb;
+const { MongoClient } = ("mongodb");
 
 const username = encodeURIComponent("simplestitchwear");
-const password = encodeURIComponent("Himani%40%23123");
+const password = encodeURIComponent("Himani@#123");
 const cluster = "sign-up.kammi.mongodb.net";
 const authSource = "atlasAdmin";
 const authMechanism = "SCRAM-SHA-256";
@@ -16,12 +15,12 @@ async function run() {
   try {
     await client.connect();
 
-    const database = client.db("sample_mflix");
+    const database = await client.db("sample_mflix");
     const ratings = database.collection("movies");
 
     const cursor = ratings.find();
 
-    await cursor.forEach(doc => console.dir(doc));
+    await cursor.toArray(doc => console.dir(doc));
     console.log(database);
   } finally {
     await client.close();
