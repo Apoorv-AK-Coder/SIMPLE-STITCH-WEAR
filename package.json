@@ -3,15 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-
   "scripts": {
     "test": "echo \"Error: no test specifiedd\" && exit 1",
     "start": "nodemon index.js"
   },
-
   "dependencies": {
     "express": "^4.18.2",
     "mongodb": "^6.3.0",
-    "mongoose": "^8.1.0"
+    "mongoose": "^8.1.0",
+    "realm-web": "^2.0.0"
   }
 }
