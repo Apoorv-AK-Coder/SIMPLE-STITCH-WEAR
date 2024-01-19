@@ -1,5 +1,5 @@
 // for the header
-fetch('./header-and-footer/header.html')
+fetch('./header.html')
 .then((response) => response.text())
 .then((data) => {
     document.querySelector("header").innerHTML = data;
@@ -9,7 +9,7 @@ fetch('./header-and-footer/header.html')
 
 // for the footer
 
-fetch('./header-and-footer/footer.html')
+fetch('./footer.html')
 .then((response) => response.text())
 .then((data) => {
     document.querySelector("footer").innerHTML = data;
