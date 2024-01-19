@@ -1,15 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buy Now</title>
+
+    <link rel="icon" type="image/x-icon" href="./images/favicon.png">
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./responsive.css">
 </head>
+
 <body>
     <header></header>
+    <div class="container form">
+        <div class="row d-flex flex" id="form">
+            <div class="column"></div>
+            <div class="column sign-up">
+                <form id="sign-up" action="./message.html" onsubmit="return validate()">
+                    <h2 style="color:white">Sign-Up</h2>
+                    <div class="d-flex">
+                        <div class="column">
+                            <p>Full Name *</p>
+                            <input type="text" placeholder="Enter Your Full Name" id="uname" required>
+                        </div>
+                        <div class="column">
+                            <p>User Id *</p>
+                            <input type="text" placeholder="Enter Your User Id" id="uid" required>
+                        </div>
+                    </div>
+
+                    <div class="d-flex">
+                        <div class="column">
+                            <p>Email *</p>
+                            <input type="email" placeholder="Enter Your E-mail" id="mail" required>
+                        </div>
+                        <div class="column">
+                            <p>Phone Number *</p>
+                            <input type="number" placeholder="Enter Your Number" id="number" required>
+                        </div>
+                    </div>
+
+                    <div class="d-flex">
+                        <div class="column">
+                            <p>Password *</p>
+                            <input type="password" placeholder="Enter Your Password" id="password" required>
+                        </div>
+                        <div class="column">
+                            <p>Confirm Password *</p>
+                            <input type="confirm password" placeholder="Enter Your Confirm Password"
+                                id="confirm-password" required>
+                        </div>
+                    </div>
+                    <button class="button2">Sign-Up</button>
+                </form>
+
+                <form id="sign-in">
+                    <h2 style="color:white">Sign-In</h2>
+                    <div class="d-flex">
+                        <div class="column">
+                            <p>User Id *</p>
+                            <input type="text" placeholder="Enter Your User Id" id="userid" required>
+                        </div>
+                        <div class="column">
+                            <p>Password *</p>
+                            <input type="confirm password" placeholder="Enter Your Password" id="pass" required>
+                        </div>
+                    </div>
+                    <button class="button2">Sign-In</button>
+                </form>
+            </div>
+
+            <div class="column"></div>
+        </div>
+    </div>
+    </div>
 
     <footer></footer>
-    
+
 </body>
 
 <script src="./calling.js"></script>
