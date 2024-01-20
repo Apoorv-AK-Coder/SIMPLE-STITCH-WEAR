@@ -7,15 +7,16 @@ setInterval(mufun, 1000);
         b1.addEventListener("click", function () {
             if ((view.style.display = "none")) {
                 view.style.display = "block";
+                b2.style.position = "fixed";
                 b2.style.display = "block";
-                b2.style.zIndex = "999";
-                b2.style.color = "white";
+
             }
         })
 
         b2.addEventListener("click", function () {
             if ((view.style.display = "block")) {
                 view.style.display = "none";
+                b2.style.display = "none";
             }
         })
     }
