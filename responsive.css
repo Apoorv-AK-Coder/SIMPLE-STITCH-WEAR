@@ -23,7 +23,9 @@
         width: 100% !important;
     }
 
-    .bottom p {font-size: 14px;}
+    .bottom p {
+        font-size: 14px;
+    }
 
     h1 {
         font-size: 45px;
@@ -66,7 +68,9 @@
         background-size: cover;
     }
 
-    .product { width:100% !important; }
+    .product {
+        width: 100% !important;
+    }
 
     .sign-up {
         padding-bottom: 20px;
@@ -80,6 +84,36 @@
         margin-top: 0px !important;
     }
 
-    .sign-up {width: 100% !important;}
+    .sign-up {
+        width: 100% !important;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: end;
+    }
+
+    #off {
+        display: none;
+    }
+
+    ul {
+        flex-direction: column;
+    }
+
+    /* ul {width: %;} */
+    ul li {text-align: left !important;}
+
+    .navbar {
+        position: fixed;
+        width: 60%;
+        height: 100%;
+        padding: 60px 20px 20px 20px;
+        z-index: 99;
+        top: 0px;
+        right: 0px;
+        display: none;
+    }
+
 
 }

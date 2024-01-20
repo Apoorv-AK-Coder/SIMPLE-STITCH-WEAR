@@ -29,7 +29,7 @@
 }
 
 .column {
-    flex: 1;
+    flex: auto;
 }
 
 .d-flex {
@@ -185,6 +185,15 @@ button {
     margin: auto;
     border-radius: 25px;
     background-color: var(--primary-color);
+}
+
+.nav {
+    margin: auto;
+    display: none;
+}
+
+.nav i {
+    font-size: 30px;
 }
 
 .line {

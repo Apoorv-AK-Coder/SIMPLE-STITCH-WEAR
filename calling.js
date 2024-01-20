@@ -1,19 +1,19 @@
 // for the header
 fetch('./header.html')
-.then((response) => response.text())
-.then((data) => {
-    document.querySelector("header").innerHTML = data;
-});
+    .then((response) => response.text())
+    .then((data) => {
+        document.querySelector("header").innerHTML = data;
+    });
 
 
 
 // for the footer
 
 fetch('./footer.html')
-.then((response) => response.text())
-.then((data) => {
-    document.querySelector("footer").innerHTML = data;
-});
+    .then((response) => response.text())
+    .then((data) => {
+        document.querySelector("footer").innerHTML = data;
+    });
 
 
 
@@ -26,8 +26,8 @@ let x = document.getElementById("sign-up");
 let y = document.getElementById("sign-in");
 
 btn2.addEventListener("click", form1)
-function form1(){
-    if((y.style.display = "block")) {
+function form1() {
+    if ((y.style.display = "block")) {
         x.style.display = 'none';
     }
     else {
@@ -36,9 +36,9 @@ function form1(){
 }
 
 btn1.addEventListener("click", form2)
-function form2(){
+function form2() {
     // console.log("hi");
-    if((x.style.display = "block")) {
+    if ((x.style.display = "block")) {
         y.style.display = 'none';
     }
     else {
@@ -57,10 +57,16 @@ function validate() {
     const password = document.getElementById("password");
     const cpassword = document.getElementById("confirm-password");
 
-    if(uname.value.trim() == "" || uid.value.trim() == "" || mail.value.trim() == "" || number.value.trim() == "" || password.value.trim() == "" || cpassword.value.trim() == ""){
+    if (uname.value.trim() == "" || uid.value.trim() == "" || mail.value.trim() == "" || number.value.trim() == "" || password.value.trim() == "" || cpassword.value.trim() == "") {
         alert("Please ebter the values");
         return false;
     } else {
         return true;
     }
 }
+
+
+
+//navbar for mobile
+
+
