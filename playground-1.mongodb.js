@@ -1,3 +1,5 @@
+//mongodb+srv://Apoorv:Apoorv%40%23123@products.mew17uv.mongodb.net/
+
 /* global use, db */
 // MongoDB Playground
 // To disable this template go to Settings | MongoDB | Use Default Template For Playground.
