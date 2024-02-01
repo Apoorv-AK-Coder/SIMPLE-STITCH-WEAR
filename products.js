@@ -4,7 +4,7 @@ let products = [{
                                 "name": "p1",
                                 "description": "wear",
                                 "price": "₹100",
-                                "picture": "<img src='./images/img-01.jpg'>"
+                                "picture": '<img src="./images/Img-01.jpg">'
                             },
                             "product2": {
                                 "id": 002,
