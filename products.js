@@ -11,21 +11,21 @@ let products = [{
                                 "name": "p2",
                                 "description": "dance",
                                 "price": "₹200",
-                                "picture": "<img src='./images/img-01.jpg'>"
+                                "picture": '<img src="./images/Img-01.jpg">'
                             },
                             "product3": {
                                 "id": 003,
                                 "name": "p3",
                                 "description": "ears",
                                 "price": "₹300",
-                                "picture": "<img src='./images/img-01.jpg'>"
+                                "picture": '<img src="./images/Img-01.jpg">'
                             },
                             "product4": {
                                 "id": 004,
                                 "name": "p4",
                                 "description": "eye",
                                 "price": "₹400",
-                                "picture": "<img src='./images/img-01.jpg'>"
+                                "picture": '<img src="./images/Img-01.jpg">'
                             }
                         },
                         
@@ -34,28 +34,28 @@ let products = [{
                                 "name": "p5",
                                 "description": "wear",
                                 "price": "500",
-                                "picture": "<img src='./images/img-01.jpg'>"
+                                "picture": '<img src="./images/Img-01.jpg">'
                             },
                             "product2": {
                                 "id": 002,
                                 "name": "p6",
                                 "description": "dance",
                                 "price": "600",
-                                "picture": "<img src='./images/img-01.jpg'>"
+                                "picture": '<img src="./images/Img-01.jpg">'
                             },
                             "product3": {
                                 "id": 003,
                                 "name": "p7",
                                 "description": "ears",
                                 "price": "700",
-                                "picture": "<img src='./images/img-01.jpg'>"
+                                "picture": '<img src="./images/Img-01.jpg">'
                             },
                             "product4": {
                                 "id": 004,
                                 "name": "p8",
                                 "description": "eye",
                                 "price": "800",
-                                "picture": "<img src='./images/img-01.jpg'>"
+                                "picture": '<img src="./images/Img-01.jpg">'
                             }
                         }
 }]

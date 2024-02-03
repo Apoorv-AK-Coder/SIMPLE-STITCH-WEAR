@@ -29,7 +29,4 @@ var data = {
 const usersRef = ref(database, "users");
 const newRef = push(usersRef, data);
 
-// Push data to Firebase
-//  var newRef = database.ref("users").push(data);
 console.log("Data added with key:", newRef.key);
-// console.log(data);
