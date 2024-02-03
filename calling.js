@@ -66,14 +66,4 @@ function validate() {
 }
 
 
-
-//mongodb
-
-var MongoClient = require('mongodb').MongoClient;
-var uri = "mongodb+srv://Simple-Stitch:Apoorv%40%23123@products.mew17uv.mongodb.net/?retryWrites=true&w=majority"
-
-MongoClient.connect(uri, function(err, client){
-    const collection = client.db("test").collection("devices");
-    client.close();
-    console.log("its working fine");
-})
+//for the signup
