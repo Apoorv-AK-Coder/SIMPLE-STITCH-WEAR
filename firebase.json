@@ -1,0 +1,7 @@
+{
+    "hosting": {
+      "site": "simple-stitch-wear",
+  
+      "public": "public"
+    }
+  }
