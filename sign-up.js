@@ -16,17 +16,18 @@ const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 
 var data = {
-    "sign-Up": {
         "FirstName": "Apoorv",
         "UserId": "Apoorv123",
         "Email": "apoobhai0@gmail.com",
         "PhoneNumber": 7906875025,
         "Password": "Apoorv@123",
         "ConfirmPassword": "Apoorv@123"
-    }
 };
 
-const usersRef = ref(database, "users");
-const newRef = push(usersRef, data);
+const signupRef = ref(database, "SignUp");
+const newRef = push(signupRef, data);
 
 console.log("Data added with key:", newRef.key);
+
+const uname = document.getElementById("uname").value;
+console.log(uname);
