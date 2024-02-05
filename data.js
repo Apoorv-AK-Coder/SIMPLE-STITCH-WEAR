@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-import { getDatabase, ref, get } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
+import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
 var firebaseConfig = {
     apiKey: "AIzaSyAV348JSscviViD2GQTfQ-Ej5ywF0zEJBk",
     authDomain: "simple-stitch-wear-49549.firebaseapp.com",
@@ -15,68 +15,33 @@ const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 
 // Reference to the 'Products' node
-const productsRef = ref(database, 'Products');
+const sareeRef = ref(database, 'Products/saree');
 
-// Fetch products from Firebase using 'get' method
-get(productsRef).then((snapshot) => {
-    if (snapshot.exists()) {
-        const products = snapshot.val();
-        displayProductsInCategories(products);
-    } else {
-        console.log("No data available");
-    }
-}).catch((error) => {
-    console.error("Error fetching data:", error);
+var productsListContainer = document.getElementById('products-list1');
+
+// Fetch and display data from Firebase
+onValue(sareeRef, function(snapshot) {
+  // Clear existing content
+  productsListContainer.innerHTML = '';
+
+  // Loop through each product in the snapshot
+  snapshot.forEach(function(productSnapshot) {
+    var product = productSnapshot.val();
+
+    // Create HTML elements to display product information
+    var productElement = document.createElement('div');
+    productElement.className = 'column item';
+
+    // Customize this part based on your actual data structure
+    productElement.innerHTML = `
+            <img src="${product.image}">
+            <h3>${product.name}</h3>
+            <!--<p>ID: ${product.id}</p>-->
+            <p>${product.description}</p>
+            <h4>Price: ${product.price}</h4>
+            <button class="buy">Buy Now <i class="fa-solid fa-cart-shopping"></i></button>
+    `;
+    // Append the product element to the container
+    productsListContainer.appendChild(productElement);
+  });
 });
-
-function displayProductsInCategories(products) {
-    for (const categoryKey in products) {
-        if (products.hasOwnProperty(categoryKey)) {
-            const category = products[categoryKey];
-            const categoryDiv = document.getElementById(`products-list${categoryKey.charAt(categoryKey.length - 1)}`);
-
-            if (categoryDiv) {
-                // Append category header if not already present
-                const existingHeader = categoryDiv.querySelector('h2');
-                if (!existingHeader) {
-                    const categoryHeader = document.createElement('h2');
-                    categoryHeader.textContent = categoryKey;
-                    categoryDiv.parentElement.querySelector(".column").appendChild(categoryHeader);
-                }
-
-                displayProducts(category, categoryDiv);
-            }
-        }
-    }
-}
-
-function displayProducts(products, categoryDiv) {
-    for (const productKey in products) {
-        if (products.hasOwnProperty(productKey)) {
-            const product = products[productKey];
-            const productDiv = document.createElement('div');
-            productDiv.innerHTML = `
-            <div class="column item">
-            <img src="${product.img}">
-            <h3>${product.name}</h3>
-            <!--<p>ID: ${product.id}</p>-->
-            <p>${product.desc}</p>
-            <h4>Price: ${product.price}</h4>
-            <button class="buy">Buy Now <i class="fa-solid fa-cart-shopping"></i></button>
-        </div>
-            `;
-            categoryDiv.appendChild(productDiv);
-        }
-    }
-}
-
-
-
-/* <div class="column item">
-            <img src="${product.img}">
-            <h3>${product.name}</h3>
-            <!--<p>ID: ${product.id}</p>-->
-            <p>${product.desc}</p>
-            <h4>Price: ${product.price}</h4>
-            <button class="buy">Buy Now <i class="fa-solid fa-cart-shopping"></i></button>
-        </div> */

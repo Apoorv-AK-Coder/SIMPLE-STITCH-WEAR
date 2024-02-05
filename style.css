@@ -171,12 +171,6 @@ button {
     background-color: rgba(151, 151, 141, 0.3);
 }
 
-.proflex {
-    /* display: flex; */
-    column-count: 4;
-    /* gap: 15px; */
-}
-
 /* Global CSS Ends Here*/
 
 /*Header starts here*/
@@ -211,7 +205,7 @@ button {
 
 .line {
     border: 1px solid var(--fourth-color);
-    margin: 0 7px;
+    margin: 0 5px;
 }
 
 ul {
@@ -231,18 +225,36 @@ ul li {
     color: var(--fourth-color);
 }
 
-ul li a {
-    color: var(--fourth-color);
-}
-
-ul li a:hover {
-    color: var(--fifth-color);
-}
-
 ul li:hover {
     color: var(--fifth-color);
     background-color: var(--fourth-color);
 }
+
+/* .subnav {flex: 0;} */
+
+ol {
+    width: 150px;
+    border-radius: 25px;
+    margin-top: 5px;
+    background-color: var(--secondry-color);
+}
+
+ol li:hover {
+    background-color: var(--primary-color);
+    border-radius: 25px;
+    color:var(--fourth-color)
+}
+
+.subnav {
+    display: none;
+    position: absolute;
+    z-index:1;
+}
+
+.store:hover .subnav {
+    display: block;
+}
+
 
 /*Header ends here*/
 
@@ -286,7 +298,7 @@ ul li:hover {
 }
 
 .items {
-    gap: 15px;
+    gap: 20px;
 }
 
 .item {
@@ -300,6 +312,13 @@ ul li:hover {
 .item img{
     width: 100%;
     height: 225px;
+}
+
+.proflex {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 0 25%;
+    box-sizing: border-box;
 }
 
 .prohero {
