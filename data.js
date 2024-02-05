@@ -1,14 +1,14 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
 import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
 var firebaseConfig = {
-    apiKey: "AIzaSyAV348JSscviViD2GQTfQ-Ej5ywF0zEJBk",
-    authDomain: "simple-stitch-wear-49549.firebaseapp.com",
-    databaseURL: "https://simple-stitch-wear-49549-default-rtdb.firebaseio.com",
-    projectId: "simple-stitch-wear-49549",
-    storageBucket: "simple-stitch-wear-49549.appspot.com",
-    messagingSenderId: "20554738672",
-    appId: "1:20554738672:web:9d3cb92e1fde0039904b35",
-    measurementId: "G-N2235GQ1G6"
+  apiKey: "AIzaSyAV348JSscviViD2GQTfQ-Ej5ywF0zEJBk",
+  authDomain: "simple-stitch-wear-49549.firebaseapp.com",
+  databaseURL: "https://simple-stitch-wear-49549-default-rtdb.firebaseio.com",
+  projectId: "simple-stitch-wear-49549",
+  storageBucket: "simple-stitch-wear-49549.appspot.com",
+  messagingSenderId: "20554738672",
+  appId: "1:20554738672:web:9d3cb92e1fde0039904b35",
+  measurementId: "G-N2235GQ1G6"
 };
 
 const app = initializeApp(firebaseConfig);
@@ -20,12 +20,12 @@ const sareeRef = ref(database, 'Products/saree');
 var productsListContainer = document.getElementById('products-list1');
 
 // Fetch and display data from Firebase
-onValue(sareeRef, function(snapshot) {
+onValue(sareeRef, function (snapshot) {
   // Clear existing content
   productsListContainer.innerHTML = '';
 
   // Loop through each product in the snapshot
-  snapshot.forEach(function(productSnapshot) {
+  snapshot.forEach(function (productSnapshot) {
     var product = productSnapshot.val();
 
     // Create HTML elements to display product information

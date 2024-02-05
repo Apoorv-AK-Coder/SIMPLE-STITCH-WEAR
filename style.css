@@ -356,7 +356,6 @@ ol li:hover {
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-size: cover;
-    height: 800px;
 }
 
 form {
@@ -429,7 +428,7 @@ form .column {
 
 .flex {
     gap: 20px;
-    margin-top: 3%;
+    /* margin-top: 3%; */
 }
 
 .sign-up {
