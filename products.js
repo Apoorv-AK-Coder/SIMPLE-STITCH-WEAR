@@ -94,7 +94,7 @@ let category2Content = Object.keys(products[0].category2).map(productKey => {
 }).join('');
 
 // Set the HTML content to the element with the id's
-document.getElementById("category1").innerHTML = category1Content;
+// document.getElementById("category1").innerHTML = category1Content;
 document.getElementById("category2").innerHTML = category2Content;
 
 console.log(products);
