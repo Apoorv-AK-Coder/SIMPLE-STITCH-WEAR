@@ -45,22 +45,3 @@ function form2() {
         x.style.display = 'block';
     }
 }
-
-
-// for the form validation
-
-function validate() {
-    const uname = document.getElementById("uname");
-    const uid = document.getElementById("uid");
-    const mail = document.getElementById("mail");
-    const number = document.getElementById("number");
-    const password = document.getElementById("password");
-    const cpassword = document.getElementById("confirm-password");
-
-    if (uname.value.trim() == "" || uid.value.trim() == "" || mail.value.trim() == "" || number.value.trim() == "" || password.value.trim() == "" || cpassword.value.trim() == "") {
-        alert("Please ebter the values");
-        return false;
-    } else {
-        return true;
-    }
-}
