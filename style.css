@@ -115,8 +115,8 @@ para {
 }
 
 a {
-    color: var(--primary-color);
-    text-decoration: none;
+    color: var(--fifth-color);
+    text-decoration: underline;
 }
 
 button {
@@ -208,6 +208,8 @@ button {
     margin: 0 5px;
 }
 
+.navbar ul a {text-decoration: none;}
+
 ul {
     display: flex;
     justify-content: center;
@@ -232,14 +234,14 @@ ul li:hover {
 
 /* .subnav {flex: 0;} */
 
-ol {
+.store ol {
     width: 150px;
     border-radius: 25px;
     margin-top: 5px;
     background-color: var(--secondry-color);
 }
 
-ol li:hover {
+.store ol li:hover {
     background-color: var(--primary-color);
     border-radius: 25px;
     color:var(--fourth-color)
@@ -269,8 +271,52 @@ ol li:hover {
     padding: 8% 0;
 }
 
+.contactbg {
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./images/contactBG.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 5% 0;
+}
+
 .clip1 {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 95%, 0 100%);
+}
+
+.contactinfo {
+    margin: auto;
+}
+
+.support {
+    margin: 10px 0;
+    display: flex;
+}
+
+.support i {
+    background-color: red;
+    font-size: 20px;
+    color:white;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+.support p {
+    margin: auto 0 auto 15px;
+}
+
+.support a {
+    font-weight: 700;
+}
+
+.contactform {
+    background-color: var(--primary-color);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.contactform p, .contactform h2 {
+    color:white;
 }
 
 /*Background images are ends here*/
@@ -335,7 +381,15 @@ ol li:hover {
 /*Footer Starts Here*/
 
 .foot {
-    background-color: var(--secondry-color);
+    border-top: 2px solid var(--secondry-color);
+    background-color: var(--fourth-color);
+    text-align: center;
+
+}
+
+.foot img {
+    width: 250px;
+    margin-bottom: 20px;
 }
 
 .bottom {
@@ -364,7 +418,7 @@ form {
     padding: 20px;
 }
 
-form input {
+form input, textarea {
     background-color: rgba(0, 0, 0, 0.5);
     border: none;
     border-bottom: 2px solid var(--fourth-color);
@@ -440,3 +494,13 @@ form .column {
 }
 
 /*Signup form ends here*/
+
+.policy {
+    /* background-color: var(--third-color); */
+    text-align: center;
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./images/colorbg.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+}
