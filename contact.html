@@ -55,20 +55,20 @@
             <div class="column contactform">
                 <h2>Send us a Message</h2>
                 <p>Have a question about our products, your order, or need assistance with sizing?</p>
-                <form id="contact" style="margin-top: 15px;">
+                <form id="contactForm" style="margin-top: 15px;">
                     <div class="column">
                         <p>Full Name *</p>
-                        <input type="text" placeholder="Enter Your Full Name" id="uname" required>
+                        <input type="text" placeholder="Enter Your Full Name" id="name" required>
                     </div>
 
                     <div class="d-flex">
                         <div class="column">
                             <p>Email *</p>
-                            <input type="email" placeholder="Enter Your E-mail" id="mail" required>
+                            <input type="email" placeholder="Enter Your E-mail" id="email" required>
                         </div>
                         <div class="column">
                             <p>Phone Number *</p>
-                            <input type="number" placeholder="Enter Your Number" id="number" required>
+                            <input type="number" placeholder="Enter Your Number" id="phone" required>
                         </div>
                     </div>
 
@@ -76,7 +76,7 @@
                         <p>Message *</p>
                         <textarea placeholder="Type Your Message Here" id="message" required></textarea>
                     </div>
-                    <button class="button2">Submit</button>
+                    <button class="button2" type="submit">Submit</button>
                 </form>
             </div>
         </div>
@@ -91,7 +91,7 @@
     <script src="https://kit.fontawesome.com/513bc71f1a.js" crossorigin="anonymous"></script>
 
     <script src="./nav.js"></script>
-    <script src="./contact.js"></script>
+    <script type="module" src="./contact.js"></script>
 
     <script type="module" src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js"></script>
     <script type="module" src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js"></script>

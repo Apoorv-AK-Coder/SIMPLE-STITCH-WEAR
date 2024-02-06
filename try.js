@@ -1,22 +1,3 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-import { getDatabase, ref, push, set } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
-
-var firebaseConfig = {
-    apiKey: "AIzaSyAV348JSscviViD2GQTfQ-Ej5ywF0zEJBk",
-    authDomain: "simple-stitch-wear-49549.firebaseapp.com",
-    databaseURL: "https://simple-stitch-wear-49549-default-rtdb.firebaseio.com",
-    projectId: "simple-stitch-wear-49549",
-    storageBucket: "simple-stitch-wear-49549.appspot.com",
-    messagingSenderId: "20554738672",
-    appId: "1:20554738672:web:9d3cb92e1fde0039904b35",
-    measurementId: "G-N2235GQ1G6"
-};
-
-const app = initializeApp(firebaseConfig);
-const database = getDatabase(app);
-
-const contactForm = document.getElementById('contactForm');
-
 contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
@@ -28,12 +9,12 @@ contactForm.addEventListener('submit', (e) => {
     const contactRef = ref(database, 'contacts');
     const newContactRef = push(contactRef);
 
-    const data = {
+   /* const data = {
         FirstName: name,
         Email: email,
         PhoneNumber: phone,
         Message: message
-    };
+    };*/
 
     set(newContactRef, data)
         .then(() => {

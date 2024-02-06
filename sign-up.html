@@ -64,11 +64,16 @@
                         </div>
                         <div class="column">
                             <p>Confirm Password *</p>
-                            <input type="password" placeholder="Enter Your Confirm Password" id="confirm-password" required>
+                            <input type="password" placeholder="Enter Your Confirm Password" id="confirm-password"
+                                required>
                         </div>
                     </div>
                     <button class="button2" id="button2">Sign-Up</button>
                 </form>
+
+                <div id="success-message">
+                </div>
+                <div id="error-message"></div>
 
                 <form id="sign-in">
                     <h2 style="color:white">Sign-In</h2>
@@ -79,10 +84,10 @@
                         </div>
                         <div class="column">
                             <p>Password *</p>
-                            <input type="confirm password" placeholder="Enter Your Password" id="pass" required>
+                            <input type="password" placeholder="Enter Your Password" id="pass" required>
                         </div>
                     </div>
-                    <button class="button2">Sign-In</button>
+                    <button class="button2" id="buttonSignIn">Sign-In</button>
                 </form>
             </div>
 
@@ -101,7 +106,9 @@
 
 <script type="module" src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js"></script>
 <script type="module" src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js"></script>
+<script type="module" src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js"></script>
 
 <script type="module" src="./sign-up.js"></script>
+<script type="module" src="./sign-in.js"></script>
 
 </html>
