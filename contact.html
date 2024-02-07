@@ -76,6 +76,8 @@
                         <p>Message *</p>
                         <textarea placeholder="Type Your Message Here" id="message" required></textarea>
                     </div>
+                    <div class="g-recaptcha" data-sitekey="6LcKHmopAAAAAMOz1FcRUlyPJ6bBKh-EAgMtz7k0"></div>
+
                     <button class="button2" type="submit">Submit</button>
                 </form>
             </div>
@@ -91,10 +93,17 @@
     <script src="https://kit.fontawesome.com/513bc71f1a.js" crossorigin="anonymous"></script>
 
     <script src="./nav.js"></script>
-    <script type="module" src="./contact.js"></script>
+    <script src="./contact.js"></script>
 
-    <script type="module" src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js"></script>
-    <script type="module" src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        (function(){
+           emailjs.init('xdQX0jSLrPOlXuRYm')
+        })();
+     </script>
 
 </body>
 
