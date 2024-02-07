@@ -1,6 +1,5 @@
 /* Global CSS Starts Here*/
-
-@import url('https://fonts.googleapis.com/css2?family=Staatliches');
+@import url('https://fonts.googleapis.com/css2?family=Sriracha');
 @import url('https://fonts.googleapis.com/css2?family=Exo');
 @import url('https://fonts.googleapis.com/css2?family=Sacramento');
 
@@ -10,14 +9,18 @@
     box-sizing: border-box;
 }
 
+/*rgb(83, 112, 115)
+rgb(151, 151, 141)
+rgb(217, 137, 108)*/
+
 :root {
-    --primary-color: #537073;
-    --secondry-color: #97978D;
+    --primary-color: #537073; 
+    --secondry-color: #97978D; 
     --third-color: #D9896C;
     --fourth-color: #ffffff;
     --fifth-color: #141414;
     /*fonts*/
-    --primary-font: Staatliches;
+    --primary-font: Sriracha;
     --secondry-font: Exo;
     --third-font: Sacramento;
 }
@@ -56,7 +59,7 @@ h1 {
 }
 
 h2 {
-    font-family: var(--third-font);
+    font-family: var(--primary-font);
     line-height: 1.5;
     font-size: 55px;
     font-weight: 400;
@@ -66,10 +69,10 @@ h2 {
 }
 
 h3 {
-    font-family: var(--third-font);
+    font-family: var(--primary-font);
     line-height: 1.5;
     font-size: 30px;
-    font-weight: 600;
+    font-weight: 500;
     margin: 0;
     padding: 0;
     color: var(--fifth-color);
@@ -171,6 +174,21 @@ button {
     background-color: rgba(151, 151, 141, 0.3);
 }
 
+.cartbutton {
+    background-color: red;
+    color: white;
+    border: 2px solid transparent;
+    /* border: none; */
+    cursor: pointer;
+    margin: 5px 10px 0 0;
+}
+
+.cartbutton:hover {
+    background-color: transparent;
+    border: 2px solid red;
+    color: red;
+}
+
 /* Global CSS Ends Here*/
 
 /*Header starts here*/
@@ -256,7 +274,6 @@ ul li:hover {
 .store:hover .subnav {
     display: block;
 }
-
 
 /*Header ends here*/
 
@@ -452,10 +469,8 @@ form .column {
 }
 
 .tongle {
-    background: linear-gradient(to top, var(--primary-color), var(--secondry-color));
-    border-radius: 50px;
-    overflow: hidden;
     display: flex;
+    gap: 10px;
 }
 
 .tongle p {
@@ -468,16 +483,17 @@ form .column {
     padding: 0;
 }
 
-.up,
-.in:hover {
-    background-color: var(--secondry-color);
+.up {
+    background-color: var(--fifth-color);
+    border: 1px solid white;
+    border-radius: 50px;
     cursor: pointer;
 }
 
-.in,
-.up:hover {
+.in {
     background-color: var(--primary-color);
     cursor: pointer;
+    border-radius: 50px;
 }
 
 .flex {
@@ -504,3 +520,33 @@ form .column {
     background-attachment: scroll;
     background-size: cover;
 }
+
+.cart {
+    background-color: rgba(83, 112, 115, 0.3);
+}
+
+.cartrow {
+    border: 1px solid var(--primary-color);
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.cartright {
+    border-left: 1px solid black;
+    padding-left: 15px;
+    max-width: 35% !important;
+}
+
+/*whatsapp start here*/
+
+.whatsapp {
+    font-size: 35px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: #25D366;
+    border-radius: 100%;
+    padding: 7px 12px;
+}
+
+/*whatsapp ends here*/

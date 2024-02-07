@@ -39,7 +39,10 @@ onValue(sareeRef, function (snapshot) {
             <!--<p>ID: ${product.id}</p>-->
             <p>${product.description}</p>
             <h4>Price: ${product.price}</h4>
-            <button class="buy">Buy Now <i class="fa-solid fa-cart-shopping"></i></button>
+            <div class="column d-flex"> 
+              <button class="cartbutton">Add To Cart <i class="fa-solid fa-plus"></i></button>
+              <button class="buy">Buy Now <i class="fa-solid fa-cart-shopping"></i></button>
+            </div>
     `;
     // Append the product element to the container
     productsListContainer.appendChild(productElement);
