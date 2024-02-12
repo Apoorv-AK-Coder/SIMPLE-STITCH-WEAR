@@ -55,9 +55,6 @@ async function SignUp(event) {
 
     await set(ref(database, `users/${uid}`), data);
 
-    // const usersRef = ref(database, "users");
-    // push(usersRef, data);
-
     alert("The sign-up Successful Please Login Now");
   } catch (error) {
     // alert("Error creating user:", error.message);
@@ -65,16 +62,16 @@ async function SignUp(event) {
   }
 }
 
-function showSuccessMessage() {
-  // Display a success message to the user
-  const successMessage = document.getElementById("success-message");
-  // successMessage.innerText = "Sign-up successful!";
-  alert("Successful signup");
-}
+// function showSuccessMessage() {
+//   // Display a success message to the user
+//   const successMessage = document.getElementById("success-message");
+//   // successMessage.innerText = "Sign-up successful!";
+//   alert("Successful signup");
+// }
 
-function showErrorMessage(error) {
-  // Display an error message to the user
-  const errorMessage = document.getElementById("error-message");
-  errorMessage.innerText = "Error: " + error.message;
-}
+// function showErrorMessage(error) {
+//   // Display an error message to the user
+//   const errorMessage = document.getElementById("error-message");
+//   errorMessage.innerText = "Error: " + error.message;
+// }
 
