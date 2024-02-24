@@ -56,9 +56,11 @@ async function SignUp(event) {
     await set(ref(database, `users/${uid}`), data);
 
     alert("The sign-up Successful Please Login Now");
+    console.log(uid);
   } catch (error) {
     // alert("Error creating user:", error.message);
     console.error("Error creating user:", error.message);
+    alert("Error creating user:", error.message);
   }
 }
 

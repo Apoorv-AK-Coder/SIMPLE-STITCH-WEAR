@@ -4,7 +4,7 @@ import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/fir
 document.addEventListener("DOMContentLoaded", function () {
     const signInForm = document.getElementById("sign-in");
     // const signInButton = signInForm.querySelector(".buttonSignIn");
-    const signInButton = signInForm.querySelector(".buttonSignIn");
+    const signInButton = signInForm.querySelector("#buttonSignIn");
 
     signInButton.addEventListener("click", SignIn);
 });
@@ -32,7 +32,9 @@ async function SignIn(event) {
     try {
         const userCredential = await signInWithEmailAndPassword(auth, uid, password);
         alert("User signed in:", userCredential.user.uid);
+        window.location.href = "./profile.html";
     } catch (error) {
-        alert("Error signing in:", error.message);
+        // alert("Error signing in:", error.message);
+        console.error("Error signing in:", error.message);
     }
 }
