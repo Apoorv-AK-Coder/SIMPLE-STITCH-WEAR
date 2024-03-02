@@ -48,3 +48,28 @@ onValue(sareeRef, function (snapshot) {
     productsListContainer.appendChild(productElement);
   });
 });
+
+
+var cart = [];
+
+// Add event listener for the "Add to Cart" buttons
+document.addEventListener('click', function(event) {
+    if (event.target.classList.contains('cartbutton')) {
+        // Get the product data
+        var productElement = event.target.closest('.item');
+        var product = {
+            name: productElement.querySelector('h3').textContent,
+            price: productElement.querySelector('h4').textContent,
+            // Add other relevant product data you want to include in the cart
+        };
+
+        // Add the product to the cart
+        cart.push(product);
+
+        // Store the cart in localStorage (optional)
+        localStorage.setItem('cart', JSON.stringify(cart));
+
+        // Navigate to the cart page
+        window.location.href = 'cart.html';
+    }
+});

@@ -29,6 +29,7 @@
                 <div class="column d-flex cartrow">
                     <div class="column cartleft">
                         <h3>Your Products</h3>
+                        <ul id="cart-items"></ul>
                     </div>
                     <div class="column cartright">
                         <h3>Check-Out</h3>
@@ -41,10 +42,29 @@
     <footer></footer>
 
 </body>
+
+<script>
+    // Retrieve cart from localStorage
+    var cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // Display products in the cart
+    var cartItems = document.getElementById('cart-items');
+    cart.forEach(function(product) {
+        var listItem = document.createElement('li');
+        listItem.textContent = product.name + ' - ' + product.price;
+        cartItems.appendChild(listItem);
+    });
+</script>
+
+
 <script src="https://kit.fontawesome.com/513bc71f1a.js" crossorigin="anonymous"></script>
 <script src="./calling.js"></script>
 <script src="./nav.js"></script>
+<script src="./products.js"></script>
+<script type="module" src="./data.js"></script>
 
+<script type="module" src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js"></script>
+<script type="module" src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js"></script>
 <script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/1c9444178aab29d5034ddef7412a9cbd.js"></script>
 
 </html>
