@@ -23,16 +23,25 @@
     </div>
 
     <div class="container cart">
-        <div class="row">
+        <!-- <div class="row cartItems">
+            <div class="column">
+                <h2>Your Cart</h2>
+                <div id="cart-items"></div>
+
+            </div>
+        </div> -->
+        <div class="row ">
             <div class="column">
                 <h2>Your Cart</h2>
                 <div class="column d-flex cartrow">
-                    <div class="column cartleft">
-                        <h3>Your Products</h3>
-                        <ul id="cart-items"></ul>
+                    <div class="column cartleft cartItems">
+                        <h3>Your Products</h3><br>
+                        <div id="cart-items"></div>
+                        <div ></div>
                     </div>
                     <div class="column cartright">
-                        <h3>Check-Out</h3>
+                        <h3>Check-Out</h3><br>
+                    <div class="cartPrice"></div>
                     </div>
                 </div>
             </div>
@@ -42,20 +51,6 @@
     <footer></footer>
 
 </body>
-
-<script>
-    // Retrieve cart from localStorage
-    var cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-    // Display products in the cart
-    var cartItems = document.getElementById('cart-items');
-    cart.forEach(function(product) {
-        var listItem = document.createElement('li');
-        listItem.textContent = product.name + ' - ' + product.price;
-        cartItems.appendChild(listItem);
-    });
-</script>
-
 
 <script src="https://kit.fontawesome.com/513bc71f1a.js" crossorigin="anonymous"></script>
 <script src="./calling.js"></script>
