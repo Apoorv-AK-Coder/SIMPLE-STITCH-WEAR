@@ -36,9 +36,10 @@ onValue(sareeRef, function (snapshot) {
     productElement.innerHTML = `
             <img src="${product.image}">
             <h3>${product.name}</h3>
-            <!--<p>ID: ${product.id}</p>-->
+            <p class="id">ID: ${product.id}</p>
             <p>${product.description}</p>
-            <h4>Price: ${product.price}</h4>
+
+            <h4>${product.price}</h4>
             <div class="column d-flex"> 
               <button class="cartbutton">Add To Cart <i class="fa-solid fa-plus"></i></button>
               <button class="buy">Buy Now <i class="fa-solid fa-cart-shopping"></i></button>
@@ -46,13 +47,14 @@ onValue(sareeRef, function (snapshot) {
     `;
     // Append the product element to the container
     productsListContainer.appendChild(productElement);
+    // console.log(product);
   });
 });
 
 
 //add to cart function start here
 
-var cart = [];
+
 
 // Add event listener for the "Add to Cart" buttons
 document.addEventListener('click', function (event) {
@@ -60,11 +62,15 @@ document.addEventListener('click', function (event) {
     // Get the product data
     var productElement = event.target.closest('.item');
     var product = {
+      // id: productElement.querySelector('.id').textContent,
+      img: productElement.querySelector('img').src,
       name: productElement.querySelector('h3').textContent,
       price: productElement.querySelector('h4').textContent,
       // Add other relevant product data you want to include in the cart
     };
-
+    let cart = [];
+    cart = JSON.parse(localStorage.getItem("cart")) ?? []
+    // console.log(getCartData)
     // Add the product to the cart
     cart.push(product);
 
@@ -85,21 +91,47 @@ function displayCartItems() {
 
   // Retrieve cart from localStorage
   var storedCart = JSON.parse(localStorage.getItem('cart')) || [];
-
+  console.log(storedCart);
+  let totalPrice =  [] ;
   // Display products in the cart
-  storedCart.map((item)=>{
-    console.log(item, " cartItems items");
+  storedCart.forEach((product) => {
+    totalPrice.push(parseInt(product.price));
+    // console.log(item, " cartItems items");
+
+    // let id = document.querySelector(".id");
+    // id.insertAdjacentHTML(`beforeend`, `
+    // <p>${product.id}</p>
+    // `)
+
+    let img = document.querySelector(".img");
+    img.insertAdjacentHTML(`beforeend`, `
+    <img src="${product.img}">
+    `)
+
     let cartItems = document.querySelector(".cartItems");
-    cartItems.insertAdjacentHTML(`beforeend`,`
-            <p>${item.name}</p>
+    cartItems.insertAdjacentHTML(`beforeend`, `
+            <p>${product.name}</p>
     `)
 
     let cartPrice = document.querySelector(".cartPrice");
-    cartPrice.insertAdjacentHTML(`beforeend`,`
-            <p>${item.price}</p>
+    cartPrice.insertAdjacentHTML(`beforeend`, `
+            <p>${product.price}</p>
     `)
-
   })
+
+  // grandTotal starts here 
+
+  // grandTotal ends here 
+  console.log("Total Price Array", totalPrice);
+  let grandTotal = totalPrice.reduce((total, price)=>price+total, 0);
+  console.log("grandTotal", grandTotal);
+
+  let Total = document.querySelector(".grandtotal");
+  Total.insertAdjacentHTML(`beforeend`, `
+            <hr>
+            <h4 class="split">Total Price: <span>${grandTotal}</span></h4>
+    `)
+  
 }
 
 // Initial display of cart items

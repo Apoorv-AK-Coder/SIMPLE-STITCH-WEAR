@@ -9,6 +9,16 @@
     box-sizing: border-box;
 }
 
+.split {
+    padding: 10px 0;
+}
+
+.split span {
+    display:block;float:right;
+    font-weight: 700;
+    /* padding: 10px; */
+}
+
 /*rgb(83, 112, 115)
 rgb(151, 151, 141)
 rgb(217, 137, 108)*/
