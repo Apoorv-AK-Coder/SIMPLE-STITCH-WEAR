@@ -92,7 +92,7 @@ function displayCartItems() {
   // Retrieve cart from localStorage
   var storedCart = JSON.parse(localStorage.getItem('cart')) || [];
   console.log(storedCart);
-  let totalPrice =  [] ;
+  let totalPrice = [];
   // Display products in the cart
   storedCart.forEach((product) => {
     totalPrice.push(parseInt(product.price));
@@ -103,19 +103,35 @@ function displayCartItems() {
     // <p>${product.id}</p>
     // `)
 
-    let img = document.querySelector(".img");
-    img.insertAdjacentHTML(`beforeend`, `
-    <img src="${product.img}">
+
+    let display = document.querySelector(".display");
+    display.insertAdjacentHTML(`beforeend`, `
+    <div class="flex cartdisplay">
+      <div class="cartdisplayleft">
+        <img src="${product.img}">
+      </div>
+      <div class="cartdisplayright">
+        <h3>${product.name}</h3>
+        <h4>Rs. ${product.price}</h4>
+      </div>
+    </div>
     `)
 
-    let cartItems = document.querySelector(".cartItems");
-    cartItems.insertAdjacentHTML(`beforeend`, `
-            <p>${product.name}</p>
-    `)
+
+
+    // let img = document.querySelector(".img");
+    // img.insertAdjacentHTML(`beforeend`, `
+    // <img src="${product.img}">
+    // `)
+
+    // let cartItems = document.querySelector(".cartItems");
+    // cartItems.insertAdjacentHTML(`beforeend`, `
+    //         <p>${product.name}</p>
+    // `)
 
     let cartPrice = document.querySelector(".cartPrice");
     cartPrice.insertAdjacentHTML(`beforeend`, `
-            <p>${product.price}</p>
+      <p class="split">${product.name} <span>${product.price}</span></p>
     `)
   })
 
@@ -123,7 +139,7 @@ function displayCartItems() {
 
   // grandTotal ends here 
   console.log("Total Price Array", totalPrice);
-  let grandTotal = totalPrice.reduce((total, price)=>price+total, 0);
+  let grandTotal = totalPrice.reduce((total, price) => price + total, 0);
   console.log("grandTotal", grandTotal);
 
   let Total = document.querySelector(".grandtotal");
@@ -131,7 +147,7 @@ function displayCartItems() {
             <hr>
             <h4 class="split">Total Price: <span>${grandTotal}</span></h4>
     `)
-  
+
 }
 
 // Initial display of cart items
