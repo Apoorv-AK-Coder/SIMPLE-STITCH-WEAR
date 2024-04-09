@@ -31,25 +31,12 @@
                     <div class="column cartleft ">
                         <div id="cart-items"></div>
                         <h3>Your Products</h3><br>
-
                         <div class="display"></div>
-
-                        <!-- <div class="flex cartdisplay">
-                            <div class="cartdisplayleft">
-                                <div class="img"></div>
-                            </div>
-                            <div class="cartdisplayright">
-                                <div class="cartItems"></div>
-                            </div>
-
-                        </div> -->
-                        <!-- <div class="id"></div> -->
                         <div></div>
                     </div>
                     <div class="column cartright">
                         <h3>Check-Out / Prices</h3><br>
                         <div class="cartPrice">
-                            <!-- <p>Prices:</p> -->
                         </div>
                         <div class="grandtotal"> </div>
                         <hr>
@@ -58,9 +45,7 @@
             </div>
         </div>
     </div>
-
     <footer></footer>
-
 </body>
 
 <script src="https://kit.fontawesome.com/513bc71f1a.js" crossorigin="anonymous"></script>
@@ -72,5 +57,23 @@
 <script type="module" src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js"></script>
 <script type="text/javascript" charset="UTF-8"
     src="//cdn.cookie-script.com/s/1c9444178aab29d5034ddef7412a9cbd.js"></script>
+
+    <script>
+        var number = 1;
+
+function updateDisplay() {
+  document.getElementById('number').innerText = number;
+}
+
+function increaseNumber() {
+  number++;
+  updateDisplay();
+}
+
+function decreaseNumber() {
+  number--;
+  updateDisplay();
+}
+    </script>
 
 </html>

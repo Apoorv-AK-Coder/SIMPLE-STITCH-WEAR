@@ -51,10 +51,7 @@ onValue(sareeRef, function (snapshot) {
   });
 });
 
-
 //add to cart function start here
-
-
 
 // Add event listener for the "Add to Cart" buttons
 document.addEventListener('click', function (event) {
@@ -91,17 +88,12 @@ function displayCartItems() {
 
   // Retrieve cart from localStorage
   var storedCart = JSON.parse(localStorage.getItem('cart')) || [];
-  console.log(storedCart);
+  // console.log(storedCart);
   let totalPrice = [];
   // Display products in the cart
   storedCart.forEach((product) => {
     totalPrice.push(parseInt(product.price));
     // console.log(item, " cartItems items");
-
-    // let id = document.querySelector(".id");
-    // id.insertAdjacentHTML(`beforeend`, `
-    // <p>${product.id}</p>
-    // `)
 
 
     let display = document.querySelector(".display");
@@ -113,39 +105,38 @@ function displayCartItems() {
       <div class="cartdisplayright">
         <h3>${product.name}</h3>
         <h4>Rs. ${product.price}</h4>
+        <p>Remove Number: <span id="number">1</span></p>
+        <button onclick="increaseNumber()">Increase</button>
+  <button onclick="decreaseNumber()">Decrease</button>
       </div>
     </div>
     `)
 
-
-
-    // let img = document.querySelector(".img");
-    // img.insertAdjacentHTML(`beforeend`, `
-    // <img src="${product.img}">
-    // `)
-
-    // let cartItems = document.querySelector(".cartItems");
-    // cartItems.insertAdjacentHTML(`beforeend`, `
-    //         <p>${product.name}</p>
-    // `)
+    
 
     let cartPrice = document.querySelector(".cartPrice");
     cartPrice.insertAdjacentHTML(`beforeend`, `
-      <p class="split">${product.name} <span>${product.price}</span></p>
+      <p class="split">${product.name} <span>Rs: ${product.price}</span></p>
     `)
   })
 
   // grandTotal starts here 
 
-  // grandTotal ends here 
-  console.log("Total Price Array", totalPrice);
-  let grandTotal = totalPrice.reduce((total, price) => price + total, 0);
-  console.log("grandTotal", grandTotal);
+  // console.log("Total Price Array", totalPrice);
+  let TotalValue = totalPrice.reduce((total, price) => price + total, 0);
+  // console.log("grandTotal", grandTotal);
+  
+  let gst = TotalValue * 0.12;
+  let delivery = TotalValue * 0.05;
+
+  let grandTotal = TotalValue + gst + delivery;
 
   let Total = document.querySelector(".grandtotal");
   Total.insertAdjacentHTML(`beforeend`, `
+            <p class="split">GST <span>Rs: ${gst}</span></p>
+            <p class="split">Delivery <span>Rs: ${delivery}</span></p>
             <hr>
-            <h4 class="split">Total Price: <span>${grandTotal}</span></h4>
+            <h4 class="split">Total Price: <span>Rs: ${grandTotal}</span></h4>
     `)
 
 }
