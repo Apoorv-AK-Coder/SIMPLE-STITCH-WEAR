@@ -105,9 +105,13 @@ function displayCartItems() {
       <div class="cartdisplayright">
         <h3>${product.name}</h3>
         <h4>Rs. ${product.price}</h4>
-        <p>Remove Number: <span id="number">1</span></p>
-        <button onclick="increaseNumber()">Increase</button>
-  <button onclick="decreaseNumber()">Decrease</button>
+        <div class="flex">
+          <!--<p onclick="decreaseNumber()" class="countericon">-</p>-->
+          <i class="fa-solid il fa-circle-minus" onclick="decreaseNumber()"></i>
+          <p><span id="number">1</span></p>
+          <i class="fa-solid ir fa-circle-plus" onclick="increaseNumber()"></i>
+          <!--<p onclick="increaseNumber()" class="countericon">+</p>-->
+        </div>
       </div>
     </div>
     `)
