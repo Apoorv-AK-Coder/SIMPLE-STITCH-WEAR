@@ -1,6 +1,5 @@
 /* Global CSS Starts Here*/
-
-@import url('https://fonts.googleapis.com/css2?family=Staatliches');
+@import url('https://fonts.googleapis.com/css2?family=Sriracha');
 @import url('https://fonts.googleapis.com/css2?family=Exo');
 @import url('https://fonts.googleapis.com/css2?family=Sacramento');
 
@@ -10,6 +9,10 @@
     box-sizing: border-box;
 }
 
+/*rgb(83, 112, 115)
+rgb(151, 151, 141)
+rgb(217, 137, 108)*/
+
 :root {
     --primary-color: #537073;
     --secondry-color: #97978D;
@@ -17,7 +20,7 @@
     --fourth-color: #010101;
     --fifth-color: #141414;
     /*fonts*/
-    --primary-font: Staatliches;
+    --primary-font: Sriracha;
     --secondry-font: Exo;
     --third-font: Sacramento;
 }
@@ -56,7 +59,7 @@ h1 {
 }
 
 h2 {
-    font-family: var(--third-font);
+    font-family: var(--primary-font);
     line-height: 1.5;
     font-size: 55px;
     font-weight: 400;
@@ -66,10 +69,10 @@ h2 {
 }
 
 h3 {
-    font-family: var(--third-font);
+    font-family: var(--primary-font);
     line-height: 1.5;
     font-size: 30px;
-    font-weight: 600;
+    font-weight: 500;
     margin: 0;
     padding: 0;
     color: var(--fifth-color);
@@ -115,8 +118,8 @@ para {
 }
 
 a {
-    color: var(--primary-color);
-    text-decoration: none;
+    color: var(--fifth-color);
+    text-decoration: underline;
 }
 
 button {
@@ -130,7 +133,8 @@ button {
     border-radius: 5px;
 }
 
-.button1, .button2 {
+.button1,
+.button2 {
     margin: 10px 20px 0 0;
 }
 
@@ -171,10 +175,19 @@ button {
     background-color: rgba(151, 151, 141, 0.3);
 }
 
-.proflex {
-    /* display: flex; */
-    column-count: 4;
-    /* gap: 15px; */
+.cartbutton {
+    background-color: red;
+    color: white;
+    border: 2px solid transparent;
+    /* border: none; */
+    cursor: pointer;
+    margin: 5px 10px 0 0;
+}
+
+.cartbutton:hover {
+    background-color: transparent;
+    border: 2px solid red;
+    color: red;
 }
 
 /* Global CSS Ends Here*/
@@ -211,7 +224,16 @@ button {
 
 .line {
     border: 1px solid var(--fourth-color);
-    margin: 0 7px;
+    margin: 0 5px;
+}
+
+.line2 {
+    border: 1px solid var(--secondry-color);
+    margin: 5px 0;
+}
+
+.navbar ul a {
+    text-decoration: none;
 }
 
 ul {
@@ -231,17 +253,34 @@ ul li {
     color: var(--fourth-color);
 }
 
-ul li a {
-    color: var(--fourth-color);
-}
-
-ul li a:hover {
-    color: var(--fifth-color);
-}
-
 ul li:hover {
     color: var(--fifth-color);
     background-color: var(--fourth-color);
+}
+
+/* .subnav {flex: 0;} */
+
+.store ol {
+    width: 150px;
+    border-radius: 25px;
+    margin-top: 5px;
+    background-color: var(--secondry-color);
+}
+
+.store ol li:hover {
+    background-color: var(--primary-color);
+    border-radius: 25px;
+    color: var(--fourth-color)
+}
+
+.subnav {
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+
+.store:hover .subnav {
+    display: block;
 }
 
 /*Header ends here*/
@@ -257,8 +296,53 @@ ul li:hover {
     padding: 8% 0;
 }
 
+.contactbg {
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./images/contactBG.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 5% 0;
+}
+
 .clip1 {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 95%, 0 100%);
+}
+
+.contactinfo {
+    margin: auto;
+}
+
+.support {
+    margin: 10px 0;
+    display: flex;
+}
+
+.support i {
+    background-color: red;
+    font-size: 20px;
+    color: white;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+.support p {
+    margin: auto 0 auto 15px;
+}
+
+.support a {
+    font-weight: 700;
+}
+
+.contactform {
+    background-color: var(--primary-color);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.contactform p,
+.contactform h2 {
+    color: white;
 }
 
 /*Background images are ends here*/
@@ -286,7 +370,7 @@ ul li:hover {
 }
 
 .items {
-    gap: 15px;
+    gap: 20px;
 }
 
 .item {
@@ -297,9 +381,16 @@ ul li:hover {
     margin-bottom: 15px;
 }
 
-.item img{
+.item img {
     width: 100%;
     height: 225px;
+}
+
+.proflex {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 0 25%;
+    box-sizing: border-box;
 }
 
 .prohero {
@@ -316,7 +407,15 @@ ul li:hover {
 /*Footer Starts Here*/
 
 .foot {
-    background-color: var(--secondry-color);
+    border-top: 2px solid var(--secondry-color);
+    background-color: var(--fourth-color);
+    text-align: center;
+
+}
+
+.foot img {
+    width: 250px;
+    margin-bottom: 20px;
 }
 
 .bottom {
@@ -337,7 +436,6 @@ ul li:hover {
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-size: cover;
-    height: 800px;
 }
 
 form {
@@ -346,7 +444,8 @@ form {
     padding: 20px;
 }
 
-form input {
+form input,
+textarea {
     background-color: rgba(0, 0, 0, 0.5);
     border: none;
     border-bottom: 2px solid var(--fourth-color);
@@ -380,10 +479,8 @@ form .column {
 }
 
 .tongle {
-    background: linear-gradient(to top, var(--primary-color), var(--secondry-color));
-    border-radius: 50px;
-    overflow: hidden;
     display: flex;
+    gap: 10px;
 }
 
 .tongle p {
@@ -396,21 +493,26 @@ form .column {
     padding: 0;
 }
 
-.up,
-.in:hover {
-    background-color: var(--secondry-color);
+.up {
+    background-color: var(--fifth-color);
+    border: 1px solid white;
+    border-radius: 50px;
     cursor: pointer;
 }
 
-.in,
-.up:hover {
+.in {
     background-color: var(--primary-color);
     cursor: pointer;
+    border-radius: 50px;
 }
 
 .flex {
+    display: flex;
+}
+
+.gap {
     gap: 20px;
-    margin-top: 3%;
+    /* margin-top: 3%; */
 }
 
 .sign-up {
@@ -422,3 +524,137 @@ form .column {
 }
 
 /*Signup form ends here*/
+
+.policy {
+    /* background-color: var(--third-color); */
+    text-align: center;
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./images/colorbg.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+.cart {
+    background-color: rgba(83, 112, 115, 0.3);
+}
+
+.cartrow {
+    border: 1px solid var(--primary-color);
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.cartright {
+    border-left: 1px solid black;
+    padding-left: 15px;
+    /* max-width: 50% !important; */
+}
+
+/*whatsapp start here*/
+
+.whatsapp {
+    font-size: 35px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: #25D366;
+    border-radius: 100%;
+    padding: 7px 12px;
+}
+
+/*whatsapp ends here*/
+
+.profilebody {
+    background-color: rgba(151, 151, 141, 0.2);
+}
+
+.profileleft {
+    max-width: 25%;
+    background-color: var(--fourth-color);
+}
+
+.shadow {
+    padding: 12px;
+    box-shadow: 0px 1px 2px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.profilepic {
+    width: 80px;
+    border: 1px solid var(--third-color);
+    border-radius: 100%;
+    margin-right: 20px;
+}
+
+profile-nav li {
+    list-style: none;
+}
+
+profile-nav li {
+    padding: 5px 5px 5px 40px;
+    margin-bottom: 5px;
+}
+
+profile-nav li:hover {
+    background-color: var(--fifth-color);
+    color: var(--third-color);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.split {
+    padding: 10px 0;
+}
+
+.split span {
+    display: block;
+    float: right;
+    font-weight: 700;
+}
+
+.cartdisplay {
+    height: 150px;
+    padding: 20px;
+    margin: 15px 20px 0 0;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+}
+
+.cartdisplayleft img {
+    width: 150px;
+    margin: 0;
+    padding: 0;
+}
+
+.cartdisplayright {
+    padding: 0 0 0 30px;
+
+    i {
+        font-size: 30px;
+        color: var(--third-color);
+    }
+
+    .il {
+        margin-right: 10px;
+    }
+
+    .ir {
+        margin-left: 10px;
+    }
+
+    p {
+        font-size: 22px;
+        line-height: 1.3;
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        padding: 3px 15px 0 15px;
+    }
+}
+
+.countericon {
+    font-size: 30px;
+    color: var(--third-color);
+    margin: 0 10px;
+}

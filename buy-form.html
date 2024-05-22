@@ -18,16 +18,17 @@
         <div class="row d-flex flex" id="form">
             <div class="column"></div>
             <div class="column sign-up">
-                <form id="buy" action="./message.html" onsubmit="return validate()">
+                <form id="buy">
                     <h2 style="color:white">Buy</h2>
+                    <p>Fields with an * are required.</p>
                     <div class="d-flex">
                         <div class="column">
-                            <p>Full Name *</p>
-                            <input type="text" placeholder="Enter Your Full Name" id="uname" required>
+                            <p>First Name *</p>
+                            <input type="text" placeholder="Enter Your First Name" id="uname" required>
                         </div>
                         <div class="column">
-                            <p>User Id *</p>
-                            <input type="text" placeholder="Enter Your User Id" id="uid" required>
+                            <p>Last Name</p>
+                            <input type="text" placeholder="Enter Your Last Name" id="uname">
                         </div>
                     </div>
 
@@ -42,16 +43,26 @@
                         </div>
                     </div>
 
+                    <p>Complete Address *</p>
+                <textarea placeholder="Please enter your full address" id="message" required></textarea>
                     <div class="d-flex">
                         <div class="column">
-                            <p>Password *</p>
-                            <input type="password" placeholder="Enter Your Password" id="password" required>
+                            <p>City *</p>
+                            <input type="text" placeholder="City Name" id="password" required>
                         </div>
                         <div class="column">
+                            <p>Zip Code *</p>
+                            <input type="text" placeholder="Enter zip/Pin code" id="password" required>
+                        </div>
+                        <div class="column">
+                            <p>State *</p>
+                            <input type="text" placeholder="Enter Your Password" id="password" required>
+                        </div>
+                        <!-- <div class="column">
                             <p>Confirm Password *</p>
                             <input type="confirm password" placeholder="Enter Your Confirm Password"
                                 id="confirm-password" required>
-                        </div>
+                        </div> -->
                     </div>
                     <button class="button2">Sign-Up</button>
                 </form>
@@ -68,5 +79,7 @@
 <script src="./calling.js"></script>
 <script src="https://kit.fontawesome.com/513bc71f1a.js" crossorigin="anonymous"></script>
 <script src="./nav.js"></script>
+
+<script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/1c9444178aab29d5034ddef7412a9cbd.js"></script>
 
 </html>

@@ -14,20 +14,66 @@
 <body>
     <header></header>
 
-    <div class="container">
-        <div class="row">
+    <div class="container" style="text-align: center; background-color: var(--fifth-color);">
+        <div class="row" style="padding: 1% 0;">
             <div class="column">
-                <h1>Add to Cart Page.</h1>
+                <h1>Cart Page</h1>
             </div>
         </div>
     </div>
 
+    <div class="container cart">
+        
+        <div class="row ">
+            <div class="column">
+                <h2>Your Cart</h2>
+                <div class="column d-flex cartrow">
+                    <div class="column cartleft ">
+                        <div id="cart-items"></div>
+                        <h3>Your Products</h3><br>
+                        <div class="display"></div>
+                        <div></div>
+                    </div>
+                    <div class="column cartright">
+                        <h3>Check-Out / Prices</h3><br>
+                        <div class="cartPrice">
+                        </div>
+                        <div class="grandtotal"> </div>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <footer></footer>
-
 </body>
+
 <script src="https://kit.fontawesome.com/513bc71f1a.js" crossorigin="anonymous"></script>
 <script src="./calling.js"></script>
 <script src="./nav.js"></script>
-<script src="./products.js"></script>
+<script type="module" src="./data.js"></script>
+
+<script type="module" src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js"></script>
+<script type="module" src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js"></script>
+<script type="text/javascript" charset="UTF-8"
+    src="//cdn.cookie-script.com/s/1c9444178aab29d5034ddef7412a9cbd.js"></script>
+
+    <script>
+        var number = 1;
+
+function updateDisplay() {
+  document.getElementById('number').innerText = number;
+}
+
+function increaseNumber() {
+  number++;
+  updateDisplay();
+}
+
+function decreaseNumber() {
+  number--;
+  updateDisplay();
+}
+    </script>
 
 </html>

@@ -5,8 +5,6 @@ fetch('./header.html')
         document.querySelector("header").innerHTML = data;
     });
 
-
-
 // for the footer
 
 fetch('./footer.html')
@@ -14,8 +12,6 @@ fetch('./footer.html')
     .then((data) => {
         document.querySelector("footer").innerHTML = data;
     });
-
-
 
 // for the form in a single position
 
@@ -25,42 +21,38 @@ let btn2 = document.getElementById("myFunction1");
 let x = document.getElementById("sign-up");
 let y = document.getElementById("sign-in");
 
+btn1.addEventListener("click", form2)
+function form2() {
+    if ((x.style.display = "block")) {
+        y.style.display = 'none';
+        btn1.style.backgroundColor = "#141414";
+        btn2.style.backgroundColor = "#537073";
+        btn1.style.border = "1px solid white";
+        btn2.style.border = "1px solid #537073";
+    }
+    else {
+        x.style.display = 'block';
+        btn1.style.backgroundColor = "#141414";
+        btn2.style.backgroundColor = "#537073";
+        btn1.style.border = "1px solid white";
+        btn2.style.border = "1px solid #537073";
+    }
+}
+
 btn2.addEventListener("click", form1)
 function form1() {
     if ((y.style.display = "block")) {
         x.style.display = 'none';
+        btn2.style.backgroundColor = "#141414";
+        btn1.style.backgroundColor = "#537073";
+        btn2.style.border = "1px solid white";
+        btn1.style.border = "1px solid #537073";
     }
     else {
         y.style.display = 'block';
-    }
-}
-
-btn1.addEventListener("click", form2)
-function form2() {
-    // console.log("hi");
-    if ((x.style.display = "block")) {
-        y.style.display = 'none';
-    }
-    else {
-        x.style.display = 'block';
-    }
-}
-
-
-// for the form validation
-
-function validate() {
-    const uname = document.getElementById("uname");
-    const uid = document.getElementById("uid");
-    const mail = document.getElementById("mail");
-    const number = document.getElementById("number");
-    const password = document.getElementById("password");
-    const cpassword = document.getElementById("confirm-password");
-
-    if (uname.value.trim() == "" || uid.value.trim() == "" || mail.value.trim() == "" || number.value.trim() == "" || password.value.trim() == "" || cpassword.value.trim() == "") {
-        alert("Please ebter the values");
-        return false;
-    } else {
-        return true;
+        btn2.style.backgroundColor = "#141414";
+        btn1.style.backgroundColor = "#537073";
+        btn2.style.border = "1px solid white";
+        btn1.style.border = "1px solid #537073";
     }
 }

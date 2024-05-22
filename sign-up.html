@@ -30,10 +30,10 @@
             </div>
             <div class="column"></div>
         </div>
-        <div class="row d-flex flex" style="padding-top: 0;" id="form">
+        <div class="row d-flex flex" style="padding-top: 0; margin-top: 3%;" id="form">
             <div class="column"></div>
             <div class="column sign-up">
-                <form id="sign-up" action="./sign-up.js" onsubmit="return validate()">
+                <form id="sign-up">
                     <h2 style="color:white">Sign-Up</h2>
                     <div class="d-flex">
                         <div class="column">
@@ -64,25 +64,30 @@
                         </div>
                         <div class="column">
                             <p>Confirm Password *</p>
-                            <input type="password" placeholder="Enter Your Confirm Password" id="confirm-password" required>
+                            <input type="password" placeholder="Enter Your Confirm Password" id="confirm-password"
+                                required>
                         </div>
                     </div>
-                    <button class="button2">Sign-Up</button>
+                    <button class="button2" id="button2">Sign-Up</button>
                 </form>
+
+                <div id="success-message">
+                </div>
+                <div id="error-message"></div>
 
                 <form id="sign-in">
                     <h2 style="color:white">Sign-In</h2>
                     <div class="d-flex">
                         <div class="column">
                             <p>User Id *</p>
-                            <input type="text" placeholder="Enter Your User Id" id="userid" required>
+                            <input type="email" placeholder="Enter Your E-mail Id" id="userid" required>
                         </div>
                         <div class="column">
                             <p>Password *</p>
-                            <input type="confirm password" placeholder="Enter Your Password" id="pass" required>
+                            <input type="password" placeholder="Enter Your Password" id="pass" required>
                         </div>
                     </div>
-                    <button class="button2">Sign-In</button>
+                    <button class="button2" id="buttonSignIn">Sign-In</button>
                 </form>
             </div>
 
@@ -101,7 +106,11 @@
 
 <script type="module" src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js"></script>
 <script type="module" src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js"></script>
+<script type="module" src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js"></script>
 
-<script type="module" src="./sign-up.js"></script>
+<script type="module" src="./js/sign-up.js"></script>
+<script type="module" src="./js/sign-in.js"></script>
+
+<script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/1c9444178aab29d5034ddef7412a9cbd.js"></script>
 
 </html>
