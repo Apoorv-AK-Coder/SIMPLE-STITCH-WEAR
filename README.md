@@ -22,3 +22,14 @@
     ➤ Email id: simplestitchwear@gmail.com
     ➤ phone no: 7906875025
     ➤ You can directly contect by the call or message over the whatsapp with the above mention number.
+
+🧱 Suggested Pages for Interview Project
+
+1.	Home
+2.	Product Listing
+3.	Category Filter
+4.	Search
+5.	Product Detail
+6.	Cart (local storage)
+7.	Responsive Design
+
