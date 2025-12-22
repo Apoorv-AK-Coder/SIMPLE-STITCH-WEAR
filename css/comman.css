@@ -1,0 +1,239 @@
+/* Global CSS Starts Here*/
+@import url('https://fonts.googleapis.com/css2?family=Sriracha');
+@import url('https://fonts.googleapis.com/css2?family=Dosis');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url(../images/Animated-Shape.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+:root {
+    --primary-color: #537073;
+    --secondary-color: #97978D;
+    --third-color: #D9896C;
+    --fourth-color: #fff;
+    --fifth-color: #141414;
+    /*fonts*/
+    --primary-font: Cinzel;
+    --secondary-font: Dosis;
+    --third-font: Sacramento;
+}
+
+.row {
+    width: 90%;
+    margin: auto;
+    padding: 80px 20px;
+}
+
+.column {
+    flex: auto;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.flex {
+    display: flex;
+}
+
+p,
+button,
+li,
+td,
+th,
+a {
+    font-family: var(--secondary-font);
+    font-size: 16px;
+    line-height: 2;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    color: var(--fourth-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--primary-font);
+    line-height: 1.4;
+    margin: 0;
+    padding: 0;
+    font-weight: 700;
+    color: var(--fourth-color);
+}
+
+h1 {
+    font-size: 60px;
+    line-height: 2;
+}
+
+h2 {
+    font-size: 55px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+a {
+    color: var(--fifth-color);
+    text-decoration: underline;
+}
+
+button {
+    margin: 0;
+    padding: 0 30px;
+    border-radius: 50px;
+    border: 0;
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--secondary-color);
+}
+
+.grid1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.grid2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.grid3 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.grid4 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+/* Header start */
+
+header {
+    background-color: var(--fifth-color);
+    position: sticky;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 99;
+}
+
+.head {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 10px 20px;
+}
+
+.head .column {
+    margin: auto 0;
+}
+
+.head .column:last-child {
+    text-align: right;
+}
+
+.nav {
+    margin: auto;
+    display: none;
+}
+
+.nav i {
+    font-size: 30px;
+}
+
+.navbar a {
+    color: var(--fourth-color);
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.navbar ul li {
+    text-align: center;
+    margin: 0;
+    padding: 0 10px;
+    cursor: pointer;
+    color: var(--fourth-color);
+}
+
+ul li:hover {
+    color: var(--fifth-color);
+    background-color: var(--fourth-color);
+}
+
+.navbar ul li.active {
+    border-left: 2px solid var(--fourth-color);
+    background-color: var(--primary-color);
+}
+
+.navbar ul li.active a {
+    color: var(--fourth-color);
+    font-weight: 600;
+}
+
+#CartSec {
+    display: flex;
+    gap: 5px;
+    justify-content: end;
+}
+
+#CartSec p {
+    background-color: var(--third-color);
+    width: fit-content;
+    position: relative;
+    padding: 5px 10px;
+    border-radius: 25px;
+    line-height: 1;
+}
+
+.logo {
+    text-align: center;
+}
+
+.logo a {
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 40px;
+    line-height: 1;
+    font-weight: 700;
+    background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color), var(--third-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Header ends */

@@ -1,79 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Header</title>
-    <link rel="icon" type="image/x-icon" href="./images/favicon.png">
-
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./responsive.css">
-
-</head>
-
-<body>
-
-    <div class="container">
-        <div class="head">
-            <div class="column">
-                <a href="./index.html"><img src="./images/logo.png"></a>
+    <div class="head">
+        <div class="column navbar" id="view">
+            <ul>
+                <li><a href="/"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="/saree"><i class="fa-solid fa-basket-shopping"></i> Products</a></li>
+            </ul>
+        </div>
+        <div class="column logo">
+            <p><a href="/">Simple Stitch Wear</a></p>
+        </div>
+        <div class="column nav">
+            <div id="on">
+                <i class="fa-solid fa-bars"></i>
             </div>
-            <div class="column nav">
-                <div id="on">
-                    <i class="fa-solid fa-bars"></i>
-                </div>
 
-                <div id="off">
-                    <i class="fa-solid fa-xmark"></i>
-                </div>
-            </div>
-            <div class="column navbar" id="view">
-                <navbar>
-                    <ul>
-                        <a href="./index.html">
-                            <li><i class="fa-solid fa-house"></i> Home</li>
-                        </a>
-                        <div class="line"></div>
-                        <a href="./buy-form.html">
-                            <li>Buy Now</li>
-                        </a>
-                        <div class="line"></div>
-                        <a href="./sign-up.html">
-                            <li><i class="fa-solid fa-user-plus"></i> Sign-Up</li>
-                        </a>
-                        <div class="line"></div>
-                        <li class="store"><i class="fa-solid fa-store"></i> Store
-                            <ol class="subnav">
-                                <a href="./saree.html">
-                                    <li>Saree</li>
-                                </a>
-                            </ol>
-                        </li>
-                        <div class="line"></div>
-                        <a href="./cart.html">
-                            <li><i class="fa-solid fa-bag-shopping"></i></li>
-                        </a>
-                        <div class="line"></div>
-
-                        <a href="./contact.html">
-                            <li><i class="fa-solid fa-address-book"></i> Contact</li>
-                        </a>
-
-                        <div class="line"></div>
-                        <a href="./profile.html">
-                            <li>Profile</li>
-
-                        </a>
-                    </ul>
-                </navbar>
+            <div id="off">
+                <i class="fa-solid fa-xmark"></i>
             </div>
         </div>
+        <div class="column" id="CartSec">
+            <p id="shoppingcart"><span>0</span> <i class="fa-solid fa-cart-shopping"></i></p>
+            <p>Hello</p>
+        </div>
     </div>
-
-</body>
-
-<!-- <script src="./nav.js"></script> -->
-<script src="https://kit.fontawesome.com/513bc71f1a.js" crossorigin="anonymous"></script>
-
-</html>
